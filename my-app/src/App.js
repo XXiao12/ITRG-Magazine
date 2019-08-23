@@ -5,10 +5,6 @@ import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     const options = {
       strings: ['What makes workshops <span class="app__text--yellow">better?</span>'],

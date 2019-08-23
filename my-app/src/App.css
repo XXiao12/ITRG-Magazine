@@ -90,8 +90,8 @@
 }
 .app__footer--pagenumber {
   position: absolute;
-  bottom: 4px;
-  right: 45px;
+  bottom: -28px;
+  right: 0;
   margin-bottom: 0;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
