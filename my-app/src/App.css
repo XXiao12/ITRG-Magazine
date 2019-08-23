@@ -20,7 +20,7 @@
 .app h1,
 .app h2 {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .app h2 {
@@ -28,7 +28,7 @@
 }
 
 .app h1 {
-  font-size: calc( 30px + (70 - 30)* ((100vw - 400px) / (1920 - 400)));
+  font-size: calc( 40px + (80 - 40)* ((100vw - 400px) / (1920 - 400)));
   margin: 0;
 }
 
@@ -46,7 +46,7 @@
 
 .app__grid--content .wrapper {
   width: 60%;
-  margin-top: 40px;
+  margin-top: 80px;
 }
 
 .app__text--yellow {
@@ -56,6 +56,7 @@
 
 .app__text--subtext {
   font-size: 18px;
+  margin-top: 0;
 }
 .app__workshop ul {
   list-style-type: none;
