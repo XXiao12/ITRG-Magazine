@@ -25,10 +25,8 @@ class App extends React.Component {
       <div className="app">
         <div className="app__content app__grid">
           <div className="app__grid--content app__content--main">
-            <div className="wrapper">
+            <div className="wrapper" id="top" name="top">
               <h1
-                id="top"
-                name="top"
                 ref={(el) => { this.el = el; }}
               />
               <p className="app__text--subtext ">Over the course of five days, our expert facilitators help you complete a key initiative, work through critical project deliverables, and train your team. We use a learning-based approach to implement Info-Tech methodologies tailored to your unique situation.</p>
