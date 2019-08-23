@@ -29,7 +29,11 @@
 
 .app h1 {
   font-size: calc( 40px + (80 - 40)* ((100vw - 400px) / (1920 - 400)));
-  margin: 0;
+  margin-bottom: 10px;
+}
+.typed-cursor,
+.typed-cursor--blink {
+  display: none;
 }
 
 .app__content--main {
