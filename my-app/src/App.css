@@ -24,7 +24,7 @@
 }
 
 .app h2 {
-  font-size: 34px;
+  font-size: 38px;
 }
 
 .app h1 {
@@ -64,15 +64,16 @@
   margin-top: 0;
 }
 .app__workshop ul li {
-  padding: 5px 0 5px 0;
+  padding: 6px 0 6px 0;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
 }
 .app__workshop ul li:last-of-type {
   margin-bottom: 32px;
 }
 .app__workshop--heading {
-  font-size: 15px;
-  font-weight: 700;
-  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .app__grid {
@@ -84,13 +85,47 @@
 .button {
   display: none;
 }
+.app__footer {
+  position: relative;
+}
+.app__footer--pagenumber {
+  position: absolute;
+  bottom: 4px;
+  right: 45px;
+  margin-bottom: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #2476b7;
+}
+
 @media screen and (min-width: 1270px) {
   .overlay {
+    display: none;
+  }
+  .app__footer--up {
     display: none;
   }
 }
 
 @media screen and (max-width: 1270px) {
+  .app__footer--pagenumber {
+    display: none;
+  }
+  .app__footer--up {
+    position: fixed;
+    bottom: 4px;
+    right: 45px;
+    display: flex;
+    border-radius: 100%;
+    background-color: #2476b7;
+    width: 70px;
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+  }
+  .app__footer--up svg {
+    color: white;
+  }
   .button {
     display: block;
     text-decoration: none;

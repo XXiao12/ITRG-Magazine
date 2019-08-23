@@ -1,5 +1,7 @@
 import React from 'react';
 import Typed from 'typed.js';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
 
 class App extends React.Component {
@@ -17,12 +19,16 @@ class App extends React.Component {
   }
 
   render() {
+    const yPosition = window.scrollY;
+    console.log('window.scrolly: ', yPosition);
     return (
       <div className="app">
         <div className="app__content app__grid">
           <div className="app__grid--content app__content--main">
             <div className="wrapper">
               <h1
+                id="top"
+                name="top"
                 ref={(el) => { this.el = el; }}
               />
               <p className="app__text--subtext ">Over the course of five days, our expert facilitators help you complete a key initiative, work through critical project deliverables, and train your team. We use a learning-based approach to implement Info-Tech methodologies tailored to your unique situation.</p>
@@ -55,6 +61,14 @@ class App extends React.Component {
                 <li>Extend your team by drawing on our analysts across a wide range of specialties.</li>
               </ul>
             </div>
+            <div className="app__footer">
+              <div className="app__footer--pagenumber">
+                <p>2</p>
+              </div>
+              <a className="app__footer--up" href="top" name="top">
+                <FontAwesomeIcon icon={faChevronUp} />
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -63,56 +77,3 @@ class App extends React.Component {
 }
 
 export default App;
-
-
-// class TypedReactDemo extends React.Component {
-//   componentDidMount() {
-//   	// If you want to pass more options as props, simply add
-//     // your desired props to this destructuring assignment.
-//     const { strings } = this.props;
-//     // You can pass other options here, such as typing speed, back speed, etc.
-//     const options = {
-//     	strings: strings,
-//       typeSpeed: 50,
-//       backSpeed: 50
-//     };
-//     // this.el refers to the <span> in the render() method
-//     this.typed = new Typed(this.el, options);
-//   }
-
-//   componentWillUnmount() {
-//   	// Make sure to destroy Typed instance on unmounting
-//     // to prevent memory leaks
-//     this.typed.destroy();
-//   }
-
-//   render() {
-//     return (
-//       <div className="wrap">
-//         <h1>Typed.js</h1>
-//         <div className="type-wrap">
-//           <span
-//             style={{ whiteSpace: 'pre' }}
-//             ref={(el) => { this.el = el; }}
-//           />
-//         </div>
-//         <button onClick={() => this.typed.toggle()}>Toggle</button>
-//         <button onClick={() => this.typed.start()}>Start</button>
-//         <button onClick={() => this.typed.stop()}>Stop</button>
-//         <button onClick={() => this.typed.reset()}>Reset</button>
-//         <button onClick={() => this.typed.destroy()}>Destroy</button>
-//       </div>
-//     );
-//   }
-// }
-
-// ReactDOM.render(
-// 	<TypedReactDemo
-//     strings={[
-//     	'Some <i>strings</i> are slanted',
-//       'Some <strong>strings</strong> are bold',
-//       'HTML characters &times; &copy;'
-//     ]}
-//   />,
-//   document.getElementById('react-root')
-// );
